@@ -13,14 +13,14 @@ public class MusicController : ControllerBase
     _auth0Provider = auth0Provider;
   }
 
-  [Authorize]
+  // [Authorize]
   [HttpPost]
   public async Task<ActionResult<Music>> CreateMusic([FromBody] Music musicData)
   {
     try 
     {
-      Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
-      musicData.CreatorId = userInfo.Id;
+      // Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
+      // musicData.CreatorId = userInfo?.Id;
       Music music = _musicService.CreateMusic(musicData);
       return (music);
     }

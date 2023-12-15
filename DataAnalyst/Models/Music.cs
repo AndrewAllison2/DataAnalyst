@@ -15,7 +15,7 @@ public class Music
     public string Vibe { get; set; }
     public string Type { get; set; }
     public string WorksWith { get; set; }
-    public string CreatorId { get; set; }
+    // public string CreatorId { get; set; }
 }
 
 

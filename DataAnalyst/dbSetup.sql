@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS accounts(
 
 CREATE TABLE music(
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  performer VARCHAR(255) NOT NULL,
+  artist VARCHAR(255) NOT NULL,
   song VARCHAR(255) NOT NULL,
   album VARCHAR(255),
   genre ENUM('DDD', 'Charles', 'Dubstep', 'HalfTime', 'Chill'),
@@ -22,11 +22,14 @@ CREATE TABLE music(
   notes VARCHAR(2000),
   vibe ENUM('chill', 'heavy'),
   type ENUM('1st Drop', 'Second Drop', 'Breakdown', 'Transition', 'Double'),
-  worksWith VARCHAR(1500),
-  creatorId VARCHAR(255) NOT NULL,
-  FOREIGN KEY(creatorId) REFERENCES accounts(id) ON DELETE CASCADE
+  worksWith VARCHAR(1500)
+  -- creatorId VARCHAR(255) NOT NULL,
+  -- FOREIGN KEY(creatorId) REFERENCES accounts(id) ON DELETE CASCADE
   ) default charset utf8 COMMENT '';
 
 
-DROP TABLE music
+DROP TABLE music;
+
+INSERT INTO music (artist, song, album, genre, energy, songKey, tempo)
+VALUES ('CloZee', 'Visions', 'Microworlds', 'Charles', '3', 'F#', '130');
 
