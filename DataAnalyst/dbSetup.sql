@@ -25,5 +25,6 @@ CREATE TABLE music(
   worksWith VARCHAR(1500)
   ) default charset utf8 COMMENT '';
 
+
 DROP TABLE music
 
