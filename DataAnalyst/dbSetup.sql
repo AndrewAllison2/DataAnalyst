@@ -22,7 +22,9 @@ CREATE TABLE music(
   notes VARCHAR(2000),
   vibe ENUM('chill', 'heavy'),
   type ENUM('1st Drop', 'Second Drop', 'Breakdown', 'Transition', 'Double'),
-  worksWith VARCHAR(1500)
+  worksWith VARCHAR(1500),
+  creatorId VARCHAR(255) NOT NULL,
+  FOREIGN KEY(creatorId) REFERENCES accounts(id) ON DELETE CASCADE
   ) default charset utf8 COMMENT '';
 
 

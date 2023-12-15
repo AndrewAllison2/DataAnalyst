@@ -19,7 +19,8 @@ public class MusicController : ControllerBase
   {
     try 
     {
-    Account userInfo = await _auth0Provider.GetUserInfoAsync
+      Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
+      musicData.CreatorId = 
     }
     catch (Exception e)
     {
