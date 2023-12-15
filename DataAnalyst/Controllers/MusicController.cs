@@ -29,4 +29,18 @@ public class MusicController : ControllerBase
       return BadRequest(e.Message);
     }
   }
+
+  [HttpGet]
+  public ActionResult<List<Music>> GetMusic()
+  {
+    try 
+    {
+      List<Music> music = _musicService.GetMusic();
+      return Ok(music);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
 }

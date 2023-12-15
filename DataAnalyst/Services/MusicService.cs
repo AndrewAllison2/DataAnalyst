@@ -26,4 +26,10 @@ public class MusicService
     } 
     return music; 
   }
+
+  internal List<Music> GetMusic()
+  {
+    List<Music> music = _musicRepository.GetMusic();
+    return music;
+  }
 }

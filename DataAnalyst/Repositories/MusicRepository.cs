@@ -37,4 +37,13 @@ public class MusicRepository
     Music music = _db.QueryFirstOrDefault<Music>(sql, new { musicId });
     return music;
   }
+
+  internal List<Music> GetMusic()
+  {
+    string sql = @"
+    SELECT * FROM music;";
+
+    List<Music> music = _db.Query<Music>(sql).ToList();
+    return music;
+  }
 }
