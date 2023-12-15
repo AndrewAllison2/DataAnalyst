@@ -14,9 +14,16 @@ CREATE TABLE music(
   performer VARCHAR(255) NOT NULL,
   song VARCHAR(255) NOT NULL,
   album VARCHAR(255),
-  spotify_genre ENUM('Rock', 'Country', 'Pop', 'Electronic', 'Alternative'),
-  spotify_track_preview_url VARCHAR(500),
-  spotify_track_duration INT NOT NULL,
-  spotify_track_popularity INT NOT NULL,
-  spotify_track_explicit BOOLEAN DEFAULT false
+  genre ENUM('DDD', 'Charles', 'Dubstep', 'HalfTime', 'Chill'),
+  energy INT,
+  songKey VARCHAR(100) NOT NULL,
+  camelotKey VARCHAR(100),
+  tempo INT NOT NULL,
+  notes VARCHAR(2000),
+  vibe ENUM('chill', 'heavy'),
+  type ENUM('1st Drop', 'Second Drop', 'Breakdown', 'Transition', 'Double'),
+  worksWith VARCHAR(1500)
   ) default charset utf8 COMMENT '';
+
+DROP TABLE music
+
