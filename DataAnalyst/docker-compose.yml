@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    image: your-dockerhub-username/DataAnalyst:latest
+    env_file:
+      - DataAnalyst-env
+    ports:
+      - "7045:80"
