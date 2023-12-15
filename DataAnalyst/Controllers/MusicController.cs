@@ -20,7 +20,9 @@ public class MusicController : ControllerBase
     try 
     {
       Account userInfo = await _auth0Provider.GetUserInfoAsync<Account>(HttpContext);
-      musicData.CreatorId = 
+      musicData.CreatorId = userInfo.Id;
+      Music music = _musicService.CreateMusic(musicData);
+      return OK(music);
     }
     catch (Exception e)
     {
