@@ -29,11 +29,12 @@ public class MusicRepository
   internal Music GetMusicById(int musicId)
   {
     string sql = @"
-    SELECT * FROM music
-    WHERE music.id = @musicId LIMIT 1
+    SELECT * 
+    FROM music
+    WHERE id = @musicId LIMIT 1
     ;";
 
-    Music music = _db.Query<Music>(sql, musicId);
+    Music music = _db.QueryFirstOrDefault<Music>(sql, new { musicId });
     return music;
   }
 }

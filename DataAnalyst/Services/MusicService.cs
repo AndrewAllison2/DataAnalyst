@@ -20,10 +20,10 @@ public class MusicService
   internal Music GetMusicById(int musicId)
   {
     Music music = _musicRepository.GetMusicById(musicId);
-    if (music === null)
+    if (music == null)
     {
-      throw new Exception('Cannot find this song!')
-    }
-    return music;
+      throw new Exception("Nope");
+    } 
+    return music; 
   }
 }

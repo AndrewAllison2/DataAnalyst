@@ -34,6 +34,7 @@
     "eslint.codeActionsOnSave.mode": "all",
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit"
-    }
+    },
+    "FSharp.suggestGitignore": false
   }
 }
