@@ -15,7 +15,7 @@ public class MusicController : ControllerBase
 
   // [Authorize]
   [HttpPost]
-  public async Task<ActionResult<Music>> CreateMusic([FromBody] Music musicData)
+  public ActionResult<Music> CreateMusic([FromBody] Music musicData)
   {
     try 
     {

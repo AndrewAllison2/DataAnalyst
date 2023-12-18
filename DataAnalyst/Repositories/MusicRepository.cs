@@ -17,8 +17,8 @@ public class MusicRepository
   internal int CreateMusic(Music musicData)
   {
     string sql = @"
-    INSERT INTO music (artist, song, album, genre, energy, songKey, camelotKey, tempo, notes, vibe, worksWith, creatorId)
-    VALUES (@Artist, @Song, @Album, @Genre, @Energy, @SongKey, @CamelotKey, @Tempo, @Notes, @Vibe, @Type, @WorksWith, @CreatorId);
+    INSERT INTO music (artist, song, album, genre, energy, songKey, camelotKey, tempo, notes, vibe, worksWith)
+    VALUES (@Artist, @Song, @Album, @Genre, @Energy, @SongKey, @CamelotKey, @Tempo, @Notes, @Vibe, @Type, @WorksWith);
     SELECT LAST_INSERT_ID()
     ;";
 
